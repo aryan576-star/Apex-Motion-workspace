@@ -1,359 +1,1357 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tables in HTML</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            background:green;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+ <link href="Tp.css">
+  <style>
+ .body{
+     background: linear-gradient(135deg, #F1E292, blue, #F1E292);
+  }
+  
+  *{
+      margin:0px;
+      padding:0px;
+      box-sizing: border-box;
+  } 
+  
+  
+     .navbox {
+            display: flex;
+            justify-content: space-between;
+                        align-items: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(35deg,  pink, #b21f1f, #1a2a6c);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+         2     border:px solid yellow;
         }
-        h1 {
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            color: #333;
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo h1 {
+           font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo strong {
+            color: #ffcc00;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+            border:px solid yellow;        }
+
+        .nav-links a {
+            text-decoration: none;
+            padding: 0.8rem 1.2rem;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid yellow;
+        }
+
+        .nav-links a:hover {
             background: blue;
-            color: white;
-            border: 2px solid black;
-            border-radius: 12px;
-            padding: 14px;
-            font-size:42px;
-        }
-        
-        h2{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border:px solid blue;
-          
-        }
-       h2 p{
-          
-          border:2px solid white;
-          background: red;
-        
-          box-shadow: 2px 2px 3px blue;
-       margin: 0px;
-          font-size: 33px;
-          padding: 4px;
-          color:yellow;
-          
-          
-        }
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border: 1px solid white;
+             -webkit-tap-highlight-color: transparent;
+    outline: none; /* optional: removes focus ring */
+                    }
+                    
+                    
+                #home {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+   min-height: vh; /* Responsive height */
+   color: white;
+   text-align: center;
+   position: relative;
+   background-color:green;
+}
+
+#home::before {
+    content: "";
+    background: url('img/logo2.png') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    filter: brightness(0.7); /* Darken the background image */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+.hero-content img{
+    width:190px;
+    height: 190px;
+    border-radius:93px;
+    border:5px solid white ;
+    box-shadow:3px 3px 3px black;
+}
+.primary{
+    margin:13px;
+}
+#home .typing-text {
+    font-size: 1.5rem;
+    color: #ffc107;
+    
+    border:2px solid yellow;
+    font-family: var(--primary-font);
+}
+
+#home p {
+    font-size: 1.2rem;
+    margin: 25px 0px;
+}
+#tmt button{
+    width: %;
+    margin-top:17px;
+    height: 45px;
+    background:yellow;
+    border: 2px solid black;
+    padding:7px;
+    border-radius:13px ;
+    
+    box-shadow:-2px -2px 3px black ;
+    font-family: var(--primary-font);
+}
+#tmt button:hover{ 
+    background-color:burlywood;
+    border:0px solid yellow;
+    box-shadow:2px 2px 3px blue;
+    transform: translateY(-5px);
+    border: 2px solid white;
+}
+#tmt  
+
+.btnh{
+    width:%;
+    
+    background:palegreen; 
        
-       p{
-         border: px solid ;
-         font-size:20px;
-         margin: 5px;
-       } 
-        
-        table {
-            width: 90%;
-            margin: auto;
-            border-collapse: collapse;
-            background: white;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+} 
+  
+       .cm1{
+            width:100%;
+            height:px;
+            border:px solid red;
+            display:flex;
+            flex-direction: calumn;
+            justify-content: center;
+            background:;
+            padding :0px 5px;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
+        #cm{
+              
+            height: 250px;
+            width:500px;
+            overflow: hidden;
+            position: relative;
+            background: yellow;
+            text-align:center;
+            margin:10px;
+            border:px solid yellow;
+            border-radius:px;
+            color:blue;
+            box-shadow:5px 5px 12px  blue;
+        
+        }
+        #cm1{
+            
+            height: 250px;
+            width:500px;
+            overflow: hidden;
+            position: relative;
+            background: #f8f9fa;
+            text-align:center;
+            margin:10px;
+            border:px solid burlywood;
+            border-radius:px;
+            color:blue;
+              box-shadow:-5px -5px 12px  yellow;
+        
+            
+        }       
+                    
+                    
+                    
+                    
+
+        /* Responsive Design */
+     
+      
+  
+    .but{
+      display:flex;
+      justify-content: center;
+     flex-direction: row;
+      background:linear-gradient(90deg, #333, #ffaab5);
+      height:100px;
+    }
+    .but button{
+      border :2px solid black;
+      background-color:yellow;
+      border-radius:14px;
+      width: 165px;
+      height:45px;
+       margin: 25px 0px;
+    }
+ .container {
+           
+            max-width: 1200px;
+        
+            margin: 0 auto;
+        }
+        
+        .hbox{
+            width:90%;
+            background:cyan;
+            border:px solid blue;
+            border-bottom:none;
+              border-right:none;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:3px;
+            padding:2px;
+            margin:33px;
+            box-shadow:4px 4px 13px blue;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top:40px;
+            color: yellow;
+            padding-top: 15px;
+            background:linear-gradient(35deg,  pink, #b21f1f, blue);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            border:2px solid black;
+            border-radius:0px;
+            border:5px solid yellow;
+         
+            width:90%;
+      box-shadow:5px 5px 12px ;
+        box-shadow:0px 5px 12px ;
+          text-shadow: 0 2px 4px white;  
+            
+        }
+
+        h1 {
+            font-size: 47px;
+            margin: 0px 10px;
+       
+            text-shadow: 4px 4px 2px  black;
+        }
+        
+        
+        .st{
+            font-size:35px;
+            margin:5px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .cards-container {
+            display: grid;
+             box-shadow:4px 4px 13px blue;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+         
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            height: 370px;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+              -webkit-tap-highlight-color: transparent;
+    outline: none; /* optional: removes focus ring */
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .image-slider {
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+            background: #f8f9fa;
+        }
+
+        .slider-images {
+            display: flex;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-image {
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
             text-align: center;
         }
-        th {
-            background-color: #007bff;
+
+        .show-all-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
         }
-        tr:nth-child(even) {
-            background-color: #20E41A;
+
+        .show-all-btn:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            transform: scale(1.05);
         }
-        tr:hover {
-            background-color:;
+
+        .slider-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 6px;
+            z-index: 5;
         }
-        button{
-          background:red;
-          color:white;
-          border:2px solid blue;
-          font-size: 17px;
-          padding:5px;
-          border-radius: 5px;
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        button:hover{
-          background:blue;
+
+        .dot.active {
+            background: white;
         }
-        img{
-            
-            width:150px;
-            height:150px;
+
+        /* Full Screen Overlay */
+        .fullscreen-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
         }
-   
+
+        .fullscreen-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .fullscreen-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fullscreen-image {
+            max-width: 90vw;
+            max-height: 80vh;
+            object-fit: contain;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .fullscreen-download {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            z-index: 1001;
+        }
+
+        .fullscreen-download:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            transform: scale(1.05);
+        }
+
+        /* Gallery View */
+        .gallery-view {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-height: 80vh;
+            overflow-y: auto;
+            margin: auto;
+            width: 90%;
+        }
+
+        .gallery-view.active {
+            display: grid;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .view-mode-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+        .view-mode-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+         .view-mode-bt {
+            position: absolute;
+            top: 20px;
+            left: 150px;
+            background: yellow;
+            color: blue;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+        .view-mode-bt:hover {
+            background:white;
+        }
+
+
         
-    </style>
-</head>
-<body>
-    <h1>Apex Motion Workspace 
- <img src="img/6.jpg">
-    </h1>
-    <table>
-        <h2> <p>Ai models </p> </h2> 
-        <!-- HEAD OF THE TABLE -->
-        <p>ai models for video ganrate </p>
-        <thead>
-            <tr>
-                <th>Modal</th>
-                <th>Link button</th>
-                <th>update</th>
-                   <th>new</th>
-            </tr>
-        </thead>
-        <!-- BODY OF THE TABLE -->
-      
-        <tbody>
-            <tr>
-                <td>wan</td>
-                <td><a href="https://create.wan.video/generate/video/image-to-video?model=wan2.2"><button>generate</button></a></td>
-                <td>on hold</td>
-            </tr>
-            <tr>
-                <td> Gemini for business</td>
-                 <td><a href="https://business.gemini.google/home/cid/6a988036-d422-4564-bf7b-654263bde5c1/r/session/16881255115068736244?csesidx=2046049186"><button>generate</button></a></td>
-                <td>on hold</td>
-            </tr>
-            <tr>
-                <td>digen</td>
-              <td><a href="https://digen.ai/"><button>generate</button></a></td>
-                <td>on hold </td>
-            </tr>
-            <tr>
-                <td>google ai studio </td>
-            <td><a href="https://aistudio.google.com/prompts/new_chat?utm_source=pwa&utm_medium=homescreen&lfhs=2&model=gemini-2.5-pro-preview-tts"><button>generate</button></a></td>
-                <td>on hold</td>
-                 
-                
-            </tr>
-        </tbody>
-    </table>
-    
-    
-    
-      <br>
-    <br>
-    
-    
-     <table>
-      <h2> <p>Content idea </p> </h2> 
-        <!-- HEAD OF THE TABLE -->
-          <p> website for beatter Content  </p>
-        <thead>
-            <tr>
-                <th> websites </th>
-                <th> open button</th>
-                <th>pro plan</th>
-                <th>new</th>
-            </tr>
-        </thead>
-        <!-- BODY OF THE TABLE -->
-        <tbody>
-            <tr>
-                <td>Animaker</td>
-                <td><a href="https://app.animaker.com/dashboard"><button>open</button></a></td>
-                <td>xyz</td>
-            </tr>
-            <tr>
-                <td>Canva</td>
-                <td><a href="https://www.canva.com/templates/?query=logo&continuation=50"><button>open</button></a></td>
-                <td>xyz</td>
-            </tr>
-            <tr>
-                <td>99 disigns </td>
-               <td><a href="https://99designs.com/inspiration/logos/sticker"><button>open</button></a></td>
-                <td>xyz</td>
-            </tr>
-            <tr>
-                <td>Pinterest</td>
-                  <td><a href="https://in.pinterest.com/"><button>open</button></a></td>
-                <td>xyz</td>
-                 
-                
-            </tr>
-        </tbody>
-    </table> 
-    
-    
-    
-    
-    <br>
-    <br>
-    
-    
-     <table>
-            <h2> <p>drive folders </p> </h2> 
-        <!-- HEAD OF THE TABLE -->
-          <p> drive folders for video uplod </p>
-        <thead>
-            <tr>
-                <th>drive folder </th>
-                <th> open button</th>
-                <th>main folder</th>
-                   <th>pro folder </th>
-            </tr>
-        </thead>
-        <!-- BODY OF THE TABLE -->
-        <tbody>
-            <tr>
-                <td>Socel Media</td>
-                <td><a href="https://drive.google.com/drive/folders/1l-0LiMDGS1JCrXramI6wxW7e9NNNWvS2"><button>open</button></a></td>
-                <td>on hold</td>
-            </tr>
-            <tr>
-                <td>business</td>
-              <td><a href="https://drive.google.com/drive/folders/1RnLTGtlgyMYcumJSJ0cgVLDg5Ggqc_RK"><button>open</button></a></td>
-                <td>on hold </td>
-            </tr>
-            <tr>
-                <td>Grapics</td>
-              <td><a href="https://drive.google.com/drive/folders/1kVd81O5aqHuxNY22592CTcvlUexleIgw"><button>open</button></a></td>
-                <td>on hold </td>
-            </tr>
-            <tr>
-                <td>Mem</td>
-             <td><a href="https://drive.google.com/drive/folders/1OubtTROiP_kca4GCYItWVJMgrVXETJjQ"><button>open</button></a></td>
-                <td>on hold</td>
-               
-                
-            </tr>
+
+        @media (max-width: 768px) {
             
-              <tr>
-                <td>background</td>
-             <td><a href="https://drive.google.com/drive/folders/1pz1r_X_bto83DvX-00grMB7bdMdi3i1G"><button>open</button></a></td>
-                <td>on hold</td>
-                
-                
-            </tr>
             
-            <tr>
-                <td>Elements</td>
-             <td><a href="https://drive.google.com/drive/folders/1Ur2EHqBkJKcKWRMPQChroIB8trj_yWK1"><button>open</button></a></td>
-                <td>on hold</td>
-               
-                
-            </tr>
             
-            <tr>
-                <td>Education</td>
-             <td><a href="https://drive.google.com/drive/folders/1MjDRj9PK2tESgz2LmSzm8y46f-3tDQG-"><button>open</button></a></td>
-                <td>on hold</td>
-                
-                
-            </tr>
+              .navbox {
+                flex-direction: column;
+                padding: 1.2rem;
+                gap: 1.2rem;
+            }
+             .logo h1 {
+            font-size: 3rem;}
+              .logo img {
+            width: 60px;
+            height: 60px;}
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
             
-              <tr>
-                <td>Art</td>
-             <td><a href="https://drive.google.com/drive/folders/1_mVEdlBs9fqcN9bXptKCSFZFilgZixvN"><button>open</button></a></td>
-                <td>on hold</td>
-                 
-                
-            </tr>
+            .cards-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            .card{
+                height:370px;
+            }
             
-        </tbody>
-    </table>
-    
-    
-       <br>
-    <br>
-    
-    
-     <table>
-        <h2> <p> Our Chennal </p> </h2> 
-        <!-- HEAD OF THE TABLE -->
-          <p>  our groups  for client support and parsnol work   </p>
-        <thead>
-            <tr>
-                <th>drive folder </th>
-                <th> open button</th>
-                <th>update</th>
-                   <th>Salary</th>
-            </tr>
-        </thead>
-        <!-- BODY OF THE TABLE -->
-        <tbody>
-            <tr>
-                <td>Whatsapp</td>
-                <td><a href="#"><button>On hold</button></a></td>
-              
-            </tr>
-            <tr>
-                <td>Telegram</td>
-                <td>xyz</td>
-              
-            </tr>
-            <tr>
-                <td>discord</td>
-                <td>xyz</td>
-              
-            </tr>
-            <tr>
-                <td> youtube</td>
-                <td>xyz</td>
-               
-                
-            </tr>
-              <tr>
-                <td> insta </td>
-                <td>xyz</td>
-               
-                
-                
-            </tr>
+            h1 {
+                font-size: 2rem;
+            }
+             .nav-links a {
+                 padding: 0.5rem 1.2rem;
+             }
             
-        </tbody>
-    </table>
-    
-    <br>
-    <br>
-      <table>
-       <h2> <p>More Tools </p> </h2> 
-        <!-- HEAD OF THE TABLE -->
-          <p>  our groups  for client support and parsnol work   </p>
-        <thead>
-            <tr>
-                <th>tools </th>
-                <th> open button</th>
-                <th>on hold   </th>
-                   <th>on hold</th>
-            </tr>
-        </thead>
-        <!-- BODY OF THE TABLE -->
-        <tbody>
-            <tr>
-                <td>img wotermark remover </td>
-                <td><a href="https://www.aiseesoft.com/watermark-remover-online/"><button>open</button></a></td>
+            
+        
+            
+            .image-slider {
+                height: 260px;
+            }
+            
+            .gallery-view {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            
+            .gallery-image {
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+              .nav-links a{
+                   gap: 2rem;
+               }
+            .cards-container {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+            
              
-            </tr>
-            <tr>
-                <td>drive folder for app</td>
-                <td>on hold</td>
-              
-            </tr>
-            <tr>
-                <td> sheets for futer plan</td>
-                <td>on hold</td>
-               
-            </tr>
-            <tr>
-                <td>goole form for aoudince rview</td>
-                <td>on hold </td>
-               
-                 
-                
-            </tr>
-        </tbody>
-    </table> 
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .card {
+                height: 280px;
+            }
+            
+            .image-slider {
+                height: 140px;
+            }
+            
+            .gallery-view {
+                grid-template-columns: repeat(2, 1fr);
+                width: 95%;
+            }
+            
+            .gallery-image {
+                height: 100px;
+            }
+        } 
+        
+        
+        #client-section {
+    position: relative;
+    padding: 40px 0;
+    margin:10px;
+    border-radius:32px;
+    border :2px solid blue  ;
+       box-shadow: 0 -10px 50px rgba(0,0,0,0.5);
+    
+    
+    background :linear-gradient(90deg, cyan, #514400);
+            
+        }
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+    margin-bottom: 40px;
+ 
+}
+
+.client-item img {
+    width: 120px;
+    border-radius: 25px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.client-item img:hover {
+    filter: grayscale(0%);
+}
+.center{
+    text-align:center;
+    font-size:45px;
+    color:white;
+    background-color:blue;
+    border-radius:14px;
+}
+
+.ftbox{
+    
+    height :px;
+  background :linear-gradient(90deg, #514400,cyan);
+         box-shadow: 0 -10px 50px orange;     
+    text-align: center;
+margin:17px;
+ border-radius:32px;
+    border :2px solid blue ;
+   
+}
+.hweb{
+    background-color:blue;
+    margin-top:25px;
+    border-radius:14px;
+    color:white;
+      font-size:45px;
+}
+
+.ftlu{
+    display:grid;
+    border:px solid yellow;
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    border:px solid blue;
+box-sizing: border-box;
+
+margin-top: 14px; 
+    
+}
+.ftli{
+    list-style: none;
+    margin :17px;
+    background-color: yellow;
+    padding:5px 5px;
+    
+    border:2px solid black;
+    border-radius: 7px;
+        box-shadow: -2px -2px 4px black;
+    
+    
+}
+
+.ftli:hover{
+    
+    border : 2px  solid  white;
+    background: blue;
+    color:white;
+    box-shadow:2px 2px 4px white;
     
     
     
+    
+    
+}
+
+
+.lbox{
+    height:45px;
+   background-color:red ;
+}
+.pr a{
+background : yellow;
+color:black;
+
+
+}
+
+.pr a:hover{
+    background :black;
+color:white;
+}
+
+.prebox{
+    border:2px solid yellow;
+    display: flex;
+    aling-items:center;
+    justify-content:center;
+    margin:7px;
+        gap:12px;
+        
+}
+
+.prebtn{
+    
+    border:2px solid black;
+    padding:7px;
+    background: green;
+    color:white;
+    border-radius:13px;
+    font-size:15px;
+    margin:1px;
+    
+}
+  </style>
+ <body class="body">
+</head>
+<nav class="navbox">
+        <div class="logo">
+            <img src="img/8.jpg" alt="AutoMotion Logo">
+            <h1>Apex<strong>Motion</strong></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#client-section">Groups</a></li>
+            <li class="pr"><a href="pro.html"> 💥Pro</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+ <section id="home">
+    <div class="hero-content">
+        <img src="img/8.jpg" alt="img not visibal"></img>
+      <h1 class="primary">Welcome to Apex Motion</h1>
+      <span class="typing-text">The best services, delivered to you.</span>
+      <p>Welcome to Flyveer – your smart service hub!  
+From learning and skills to food, fitness, and more – we bring it all to you.  
+Fast, simple, and ready when you need it.  
+Explore with us and make life easier every day!</p>
+
+
+                    </div>
+</div>
+
+<div class="cm1">
+    <div id ="cm1">
+          <div class="slider-images" id="slider9">
+                        <img class="slider-image" src="img/6.jpg" alt="local">
+                        <img class="slider-image" src="img/8.jpg" alt="Nature Paradise">
+                        <img class="slider-image" src="https://placehold.co/300x200/CDDC39/white?text=Nature+3" alt="Nature Paradise">
+                        <img class="slider-image" src="https://placehold.co/300x200/FFEB3B/white?text=Nature+4" alt="Nature Paradise">
+                         <img class="slider-image" src="5.jpeg " alt="Nature Paradise">
+                    </div>
+                      <div class="slider-dots">
+                        <div class="dot active" onclick="goToSlide(9, 0, event)"></div>
+                        <div class="dot" onclick="goToSlide(9, 1, event)"></div>
+                        <div class="dot" onclick="goToSlide(9, 2, event)"></div>
+                        <div class="dot" onclick="goToSlide(9, 3, event)"></div>
+                    </div>
+    </div>
+    <div id ="cm">
+        <div class="slider-images" id="slider10">
+                        <img class="slider-image" src="uf.html" alt="local">
+                        <img class="slider-image" src="2.jpg" alt="Nature Paradise">
+                        <img class="slider-image" src="https://placehold.co/300x200/CDDC39/white?text=Nature+3" alt="Nature Paradise">
+                        <img class="slider-image" src="https://placehold.co/300x200/FFEB3B/white?text=Nature+4" alt="Nature Paradise">
+                         <img class="slider-image" src="5.jpeg " alt="Nature Paradise">
+                    </div>
+                      <div class="slider-dots">
+                        <div class="dot active" onclick="goToSlide(9, 0, event)"></div>
+                        <div class="dot" onclick="goToSlide(9, 1, event)"></div>
+                        <div class="dot" onclick="goToSlide(9, 2, event)"></div>
+                        <div class="dot" onclick="goToSlide(9, 3, event)"></div>
+                    </div>
+    </div>
+</div>
+
+
+    <div class="primary center1" id="tmt"><a href="#services-container"><button class="btnh2"><h2>Explore Now</h2></button></a></div>
+    </div>
+  </section>
+   
+
+
+
+  
+<div class="but">   <a href="https://drive.google.com/drive/folders/1NNwYuMVNWRjHVugdkDS31GmGU1HMSPe-"><button>sticman</button></a></div>
+</div>
+</div>
+   <div class="container" id="container">
+       <div class="hbox">
+        <header>
+            <h1><strong class="st">👑</strong>✨ Full Screen Image Viewer ✨<strong class="st">👑</strong></h1>
+            <p class="subtitle">Click cards to view images in full screen!</p>
+        </header>
+        </div>
+        
+        <div class="cards-container">
+            <!-- Card 1 -->
+            <div class="card" onclick="showAllImages(['img/8.jpg', 'img/6.jpg', 'https://placehold.co/800x600/CDDC39/white?text=Nature+3', 'https://placehold.co/800x600/FFEB3B/white?text=Nature+4', '/img/main1.jpg.co/800x600' ], 'Nature Paradise')">
+                <div class="image-slider">
+                    <div class="slider-images" id="slider1">
+                        <img class="slider-image" src="Img/6.jpg" alt="Nature Paradise">
+                        <img class="slider-image" src="img/8.jpg" alt="Nature Paradise">
+                        <img class="slider-image" src="https://placehold.co/300x200/CDDC39/white?text=Nature+3" alt="Nature Paradise">
+                        <img class="slider-image" src="https://placehold.co/300x200/FFEB3B/white?text=Nature+4" alt="Nature Paradise">
+                         <img class="slider-image" src="img/6.jpg " alt="Nature Paradise">
+                    </div>
+                    <div class="slider-dots">
+                        <div class="dot active" onclick="goToSlide(1, 0, event)"></div>
+                        <div class="dot" onclick="goToSlide(1, 1, event)"></div>
+                        <div class="dot" onclick="goToSlide(1, 2, event)"></div>
+                        <div class="dot" onclick="goToSlide(1, 3, event)"></div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Nature Paradise</div>
+                    
+                     <div class="prebox">
+                 <a href="https://www.youtube.com"> <button class="prebtn">singal pack  prievew</button></a> 
+                    
+                    <button class="prebtn"> pro pack priview</button>
+                        <button class="prebtn">Get pro </button>
+                    </div>
+                    
+                    
+                    
+                    <button class="show-all-btn" onclick="showAllImages(['https://placehold.co/800x600/4CAF50/white?text=Nature+1', 'https://placehold.co/800x600/8BC34A/white?text=Nature+2', 'https://placehold.co/800x600/CDDC39/white?text=Nature+3', 'https://placehold.co/800x600/FFEB3B/white?text=Nature+4','5.jpeg+5'], 'Nature Paradise', event)">Show All</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card" onclick="showAllImages(['https://placehold.co/800x600/2196F3/white?text=Urban+1', 'https://placehold.co/800x600/03A9F4/white?text=Urban+2', 'https://placehold.co/800x600/00BCD4/white?text=Urban+3', 'https://placehold.co/800x600/009688/white?text=Urban+4'], 'Urban Life')">
+                <div class="image-slider">
+                    <div class="slider-images" id="slider2">
+                        <img class="slider-image" src="https://placehold.co/300x200/2196F3/white?text=Urban+1" alt="Urban Life">
+                        <img class="slider-image" src="https://placehold.co/300x200/03A9F4/white?text=Urban+2" alt="Urban Life">
+                        <img class="slider-image" src="https://placehold.co/300x200/00BCD4/white?text=Urban+3" alt="Urban Life">
+                        <img class="slider-image" src="https://placehold.co/300x200/009688/white?text=Urban+4" alt="Urban Life">
+                   
+                    </div>
+                    <div class="slider-dots">
+                        <div class="dot active" onclick="goToSlide(2, 0, event)"></div>
+                        <div class="dot" onclick="goToSlide(2, 1, event)"></div>
+                        <div class="dot" onclick="goToSlide(2, 2, event)"></div>
+                        <div class="dot" onclick="goToSlide(2, 3, event)"></div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Urban Life</div>
+                    
+                     <div class="prebox">
+                 <a href="https://www.youtube.com"> <button class="prebtn">singal pack  prievew</button></a> 
+                    
+                    <button class="prebtn"> pro pack priview</button>
+                        <button class="prebtn">Get pro </button>
+                    </div>
+                    
+                    
+                    
+                    
+                    <button class="show-all-btn" onclick="showAllImages(['https://placehold.co/800x600/2196F3/white?text=Urban+1', 'https://placehold.co/800x600/03A9F4/white?text=Urban+2', 'https://placehold.co/800x600/00BCD4/white?text=Urban+3', 'https://placehold.co/800x600/009688/white?text=Urban+4'], 'Urban Life', event)">Show All</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card" onclick="showAllImages(['https://placehold.co/800x600/00BCD4/white?text=Ocean+1', 'https://placehold.co/800x600/009688/white?text=Ocean+2', 'https://placehold.co/800x600/4CAF50/white?text=Ocean+3', 'https://placehold.co/800x600/8BC34A/white?text=Ocean+4'], 'Ocean Dreams')">
+                <div class="image-slider">
+                    <div class="slider-images" id="slider3">
+                        <img class="slider-image" src="https://placehold.co/300x200/00BCD4/white?text=Ocean+1" alt="Ocean Dreams">
+                        <img class="slider-image" src="https://placehold.co/300x200/009688/white?text=Ocean+2" alt="Ocean Dreams">
+                        <img class="slider-image" src="https://placehold.co/300x200/4CAF50/white?text=Ocean+3" alt="Ocean Dreams">
+                        <img class="slider-image" src="https://placehold.co/300x200/8BC34A/white?text=Ocean+4" alt="Ocean Dreams">
+                    </div>
+                    <div class="slider-dots">
+                        <div class="dot active" onclick="goToSlide(3, 0, event)"></div>
+                        <div class="dot" onclick="goToSlide(3, 1, event)"></div>
+                        <div class="dot" onclick="goToSlide(3, 2, event)"></div>
+                        <div class="dot" onclick="goToSlide(3, 3, event)"></div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Ocean Dreams</div>
+                    
+                    
+                    <div class="prebox">
+                 <a href="https://www.youtube.com"> <button class="prebtn">singal pack  prievew</button></a> 
+                    
+                    <button class="prebtn"> pro pack priview</button>
+                        <button class="prebtn">Get pro </button>
+                    </div> 
+                    
+                    
+                    <button class="show-all-btn" onclick="showAllImages(['https://placehold.co/800x600/00BCD4/white?text=Ocean+1', 'https://placehold.co/800x600/009688/white?text=Ocean+2', 'https://placehold.co/800x600/4CAF50/white?text=Ocean+3', 'https://placehold.co/800x600/8BC34A/white?text=Ocean+4'], 'Ocean Dreams', event)">Show All</button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card" onclick="showAllImages(['https://placehold.co/800x600/795548/white?text=Mountain+1', 'https://placehold.co/800x600/607D8B/white?text=Mountain+2', 'https://placehold.co/800x600/455A64/white?text=Mountain+3', 'https://placehold.co/800x600/37474F/white?text=Mountain+4'], 'Mountain Adventure')">
+                <div class="image-slider">
+                    <div class="slider-images" id="slider4">
+                        <img class="slider-image" src="https://placehold.co/300x200/795548/white?text=Mountain+1" alt="Mountain Adventure">
+                        <img class="slider-image" src="https://placehold.co/300x200/607D8B/white?text=Mountain+2" alt="Mountain Adventure">
+                        <img class="slider-image" src="https://placehold.co/300x200/455A64/white?text=Mountain+3" alt="Mountain Adventure">
+                        <img class="slider-image" src="https://placehold.co/300x200/37474F/white?text=Mountain+4" alt="Mountain Adventure">
+                    </div>
+                    <div class="slider-dots">
+                        <div class="dot active" onclick="goToSlide(4, 0, event)"></div>
+                        <div class="dot" onclick="goToSlide(4, 1, event)"></div>
+                        <div class="dot" onclick="goToSlide(4, 2, event)"></div>
+                        <div class="dot" onclick="goToSlide(4, 3, event)"></div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    
+                    <div class="card-title">Mountain Adventure</div>
+                    
+                    
+                     <div class="prebox">
+                 <a href="https://www.youtube.com"> <button class="prebtn">singal pack  prievew</button></a> 
+                    
+                    <button class="prebtn"> pro pack priview</button>
+                        <button class="prebtn">Get pro </button>
+                    </div>
+                    
+                    
+                    <button class="show-all-btn" onclick="showAllImages(['https://placehold.co/800x600/795548/white?text=Mountain+1', 'https://placehold.co/800x600/607D8B/white?text=Mountain+2', 'https://placehold.co/800x600/455A64/white?text=Mountain+3', 'https://placehold.co/800x600/37474F/white?text=Mountain+4'], 'Mountain Adventure', event)">Show All</button>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card" onclick="showAllImages(['https://placehold.co/800x600/FF5722/white?text=Food+1', 'https://placehold.co/800x600/FF9800/white?text=Food+2', 'https://placehold.co/800x600/FFC107/white?text=Food+3', 'https://placehold.co/800x600/FFEB3B/white?text=Food+4'], 'Food Delights')">
+                <div class="image-slider">
+                    <div class="slider-images" id="slider5">
+                        <img class="slider-image" src="https://placehold.co/300x200/FF5722/white?text=Food+1" alt="Food Delights">
+                        <img class="slider-image" src="https://placehold.co/300x200/FF9800/white?text=Food+2" alt="Food Delights">
+                        <img class="slider-image" src="https://placehold.co/300x200/FFC107/white?text=Food+3" alt="Food Delights">
+                        <img class="slider-image" src="https://placehold.co/300x200/FFEB3B/white?text=Food+4" alt="Food Delights">
+                    </div>
+                    <div class="slider-dots">
+                        <div class="dot active" onclick="goToSlide(5, 0, event)"></div>
+                        <div class="dot" onclick="goToSlide(5, 1, event)"></div>
+                        <div class="dot" onclick="goToSlide(5, 2, event)"></div>
+                        <div class="dot" onclick="goToSlide(5, 3, event)"></div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Food Delights</div>
+                    
+                     <div class="prebox">
+                 <a href="https://www.youtube.com"> <button class="prebtn">singal pack  prievew</button></a> 
+                    
+                    <button class="prebtn"> pro pack priview</button>
+                        <button class="prebtn">Get pro </button>
+                    </div>
+                    
+                    
+                    <button class="show-all-btn" onclick="showAllImages(['https://placehold.co/800x600/FF5722/white?text=Food+1', 'https://placehold.co/800x600/FF9800/white?text=Food+2', 'https://placehold.co/800x600/FFC107/white?text=Food+3', 'https://placehold.co/800x600/FFEB3B/white?text=Food+4'], 'Food Delights', event)">Show All</button>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card" onclick="showAllImages(['https://placehold.co/800x600/3F51B5/white?text=Space+1', 'https://placehold.co/800x600/673AB7/white?text=Space+2', 'https://placehold.co/800x600/9C27B0/white?text=Space+3', 'https://placehold.co/800x600/E91E63/white?text=Space+4'], 'Space Exploration')">
+                <div class="image-slider">
+                    <div class="slider-images" id="slider6">
+                        <img class="slider-image" src="https://placehold.co/300x200/3F51B5/white?text=Space+1" alt="Space Exploration">
+                        <img class="slider-image" src="https://placehold.co/300x200/673AB7/white?text=Space+2" alt="Space Exploration">
+                        <img class="slider-image" src="https://placehold.co/300x200/9C27B0/white?text=Space+3" alt="Space Exploration">
+                        <img class="slider-image" src="https://placehold.co/300x200/E91E63/white?text=Space+4" alt="Space Exploration">
+                    </div>
+                    <div class="slider-dots">
+                        <div class="dot active" onclick="goToSlide(6, 0, event)"></div>
+                        <div class="dot" onclick="goToSlide(6, 1, event)"></div>
+                        <div class="dot" onclick="goToSlide(6, 2, event)"></div>
+                        <div class="dot" onclick="goToSlide(6, 3, event)"></div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Space Exploration</div>
+                    
+                     <div class="prebox">
+                 <a href="https://www.youtube.com"> <button class="prebtn">singal pack  prievew</button></a> 
+                    
+                    <button class="prebtn"> pro pack priview</button>
+                        <button class="prebtn">Get pro </button>
+                    </div>
+                    
+                    
+                    <button class="show-all-btn" onclick="showAllImages(['https://placehold.co/800x600/3F51B5/white?text=Space+1', 'https://placehold.co/800x600/673AB7/white?text=Space+2', 'https://placehold.co/800x600/9C27B0/white?text=Space+3', 'https://placehold.co/800x600/E91E63/white?text=Space+4'], 'Space Exploration', event)">Show All</button>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="card" onclick="showAllImages(['https://placehold.co/800x600/4CAF50/white?text=Wildlife+1', 'https://placehold.co/800x600/8BC34A/white?text=Wildlife+2', 'https://placehold.co/800x600/CDDC39/white?text=Wildlife+3', 'https://placehold.co/800x600/FFEB3B/white?text=Wildlife+4'], 'Wildlife Wonders')">
+                <div class="image-slider">
+                    <div class="slider-images" id="slider7">
+                        <img class="slider-image" src="https://placehold.co/300x200/4CAF50/white?text=Wildlife+1" alt="Wildlife Wonders">
+                        <img class="slider-image" src="https://placehold.co/300x200/8BC34A/white?text=Wildlife+2" alt="Wildlife Wonders">
+                        <img class="slider-image" src="https://placehold.co/300x200/CDDC39/white?text=Wildlife+3" alt="Wildlife Wonders">
+                        <img class="slider-image" src="https://placehold.co/300x200/FFEB3B/white?text=Wildlife+4" alt="Wildlife Wonders">
+                    </div>
+                    <div class="slider-dots">
+                        <div class="dot active" onclick="goToSlide(7, 0, event)"></div>
+                        <div class="dot" onclick="goToSlide(7, 1, event)"></div>
+                        <div class="dot" onclick="goToSlide(7, 2, event)"></div>
+                        <div class="dot" onclick="goToSlide(7, 3, event)"></div>
+                    </div>
+                    
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Wildlife Wonders</div>
+                    
+                     <div class="prebox">
+                 <a href="https://www.youtube.com"> <button class="prebtn">singal pack  prievew</button></a> 
+                    
+                    <button class="prebtn"> pro pack priview</button>
+                        <button class="prebtn">Get pro </button>
+                    </div>
+                    
+                    <button class="show-all-btn" onclick="showAllImages(['https://placehold.co/800x600/4CAF50/white?text=Wildlife+1', 'https://placehold.co/800x600/8BC34A/white?text=Wildlife+2', 'https://placehold.co/800x600/CDDC39/white?text=Wildlife+3', 'https://placehold.co/800x600/FFEB3B/white?text=Wildlife+4'], 'Wildlife Wonders', event)">Show All</button>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="card" onclick="showAllImages(['https://placehold.co/800x600/E91E63/white?text=Abstract+1', 'https://placehold.co/800x600/9C27B0/white?text=Abstract+2', 'https://placehold.co/800x600/673AB7/white?text=Abstract+3', 'https://placehold.co/800x600/3F51B5/white?text=Abstract+4'], 'Abstract Art')">
+                <div class="image-slider">
+                    <div class="slider-images" id="slider8">
+                        <img class="slider-image" src="https://placehold.co/300x200/E91E63/white?text=Abstract+1" alt="Abstract Art">
+                        <img class="slider-image" src="https://placehold.co/300x200/9C27B0/white?text=Abstract+2" alt="Abstract Art">
+                        <img class="slider-image" src="https://placehold.co/300x200/673AB7/white?text=Abstract+3" alt="Abstract Art">
+                        <img class="slider-image" src="https://placehold.co/300x200/3F51B5/white?text=Abstract+4" alt="Abstract Art">
+                    </div>
+                    <div class="slider-dots">
+                        <div class="dot active" onclick="goToSlide(8, 0, event)"></div>
+                        <div class="dot" onclick="goToSlide(8, 1, event)"></div>
+                        <div class="dot" onclick="goToSlide(8, 2, event)"></div>
+                        <div class="dot" onclick="goToSlide(8, 3, event)"></div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-title">Abstract Art</div>
+                    <div class="prebox">
+                 <a href="https://www.youtube.com"> <button class="prebtn">singal pack  prievew</button></a> 
+                    
+                    <button class="prebtn"> pro pack priview</button>
+                        <button class="prebtn">Get pro </button>
+                    </div>
+                    <button class="show-all-btn" onclick="showAllImages(['https://placehold.co/800x600/E91E63/white?text=Abstract+1', 'https://placehold.co/800x600/9C27B0/white?text=Abstract+2', 'https://placehold.co/800x600/673AB7/white?text=Abstract+3', 'https://placehold.co/800x600/3F51B5/white?text=Abstract+4'], 'Abstract Art', event)">Show All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Screen Overlay -->
+    <div class="fullscreen-overlay" id="fullscreenOverlay">
+        <div class="fullscreen-container">
+            <button class="close-btn" onclick="closeFullscreen()">×</button>
+            
+            <button class="view-mode-btn" id="viewModeBtn" onclick="toggleViewMode()">Grid View</button>
+            
+         <a href="pro.html">   <button class="view-mode-bt" id="viewModeBtn" >Pro</button></a>
+            
+            <img class="fullscreen-image" id="fullscreenImage" src="" alt="">
+            <div class="gallery-view" id="galleryView"></div>
+            <button class="fullscreen-download" id="fullscreenDownload" onclick="downloadCurrentImage()">All Free img</button>
+        </div>
+    </div>
+      <section id="client-section">
+    <h1 class="primary center">Our Valued Clients</h1>
+    <div id="clients">
+      <div class="client-item">
+        <a href="33.html"><img src="img/8.jpg" alt="Client Logo 1"></a>
+      </div>
+      <div class="client-item">
+        <img src=" img/8.jpg" alt="Client Logo 2">
+      </div>
+      <div class="client-item">
+        <img src="img/8.jpg " alt="Client Logo 3">
+      </div>
+      <div class="client-item">
+        <img src="img/8.jpg" alt="Client Logo 4">
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+      <div class = "ftbox"><h1 class="hweb">web content </h1>
+        <ul class="ftlu">
+          <li class="ftli">Home Script </li>
+          <li class="ftli">Home</li>
+          <li class="ftli">Home</li>
+           <li class="ftli">home</li>
+          <li class="ftli">Home </li>
+          <li class="ftli">Home</li>
+           <li class="ftli">home</li>
+          <li class="ftli">Home</li>
+          <li class="ftli">Home</li>
+           <li class="ftli">home</li>
+          <li class="ftli">Home</li>
+          <li class="ftli">Home</li>
+          
+          
+      </ul>
+      </div>
+    <div class="lbox"></div>
+      
+  </footer>
 </body>
-</html> 
+
+    <script>
+
+        let currentImages = [];
+        let currentImageIndex = 0;
+        let currentCardTitle = '';
+        let isGridView = false;
+
+        // Auto slider functionality
+        function startAutoSliders() {
+            const sliders = [
+                { id: 'slider1', images: 5 },
+                { id: 'slider2', images: 4 },
+                { id: 'slider3', images: 4 },
+                { id: 'slider4', images: 4 },
+                { id: 'slider5', images: 4 },
+                { id: 'slider6', images: 4 },
+                { id: 'slider7', images: 4 },
+                { id: 'slider8', images: 4 },
+                 { id: 'slider9', images: 4 },
+                  { id: 'slider10', images: 4 },
+            ];
+
+            sliders.forEach(slider => {
+                let currentSlide = 0;
+                setInterval(() => {
+                    currentSlide = (currentSlide + 1) % slider.images;
+                    const sliderElement = document.getElementById(slider.id);
+                    sliderElement.style.transform = `translateX(-${currentSlide * 100}%)`;
+                    
+                    // Update dots
+                    const dots = sliderElement.parentElement.querySelector('.slider-dots').children;
+                    for (let i = 0; i < dots.length; i++) {
+                        dots[i].classList.toggle('active', i === currentSlide);
+                    }
+                }, 3000);
+            });
+        }
+
+        // Go to specific slide
+        function goToSlide(cardNumber, slideIndex, event) {
+            event.stopPropagation();
+            const sliderId = `slider${cardNumber}`;
+            const sliderElement = document.getElementById(sliderId);
+            sliderElement.style.transform = `translatex(-${slideIndex * 100}%)`;
+            
+            // Update dots
+            const dots = sliderElement.parentElement.querySelector('.slider-dots').children;
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.toggle('active', i === slideIndex);
+            }
+        }
+
+        // Show all images in fullscreen
+        function showAllImages(images, title, event) {
+            if (event) {
+                event.stopPropagation();
+            }
+            currentImages = images;
+            currentImageIndex = 0;
+            currentCardTitle = title;
+            isGridView = false;
+            
+            showFullscreenImage(images[0]);
+            document.getElementById('viewModeBtn').textContent = 'Grid View';
+            document.getElementById('galleryView').classList.remove('active');
+            document.getElementById('fullscreenImage').style.display = 'block';
+        }
+
+        // Show single image in fullscreen
+        function showFullscreenImage(imageSrc) {
+            const fullscreenImage = document.getElementById('fullscreenImage');
+            fullscreenImage.src = imageSrc;
+            fullscreenImage.alt = currentCardTitle;
+            document.getElementById('fullscreenOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close fullscreen
+        function closeFullscreen() {
+            document.getElementById('fullscreenOverlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
+            isGridView = false;
+        }
+
+        // Toggle between single image view and grid view
+        function toggleViewMode() {
+            isGridView = !isGridView;
+            
+            if (isGridView) {
+                // Show grid view
+                const galleryView = document.getElementById('galleryView');
+                galleryView.innerHTML = '';
+                
+                currentImages.forEach((image, index) => {
+                    const img = document.createElement('img');
+                    img.className = 'gallery-image';
+                    img.src = image;
+                    img.alt = `${currentCardTitle} ${index + 1}`;
+                    img.onclick = () => {
+                        currentImageIndex = index;
+                        showFullscreenImage(image);
+                        isGridView = false;
+                        document.getElementById('viewModeBtn').textContent = 'Grid View';
+                        galleryView.classList.remove('active');
+                        document.getElementById('fullscreenImage').style.display = 'block';
+                    };
+                    galleryView.appendChild(img);
+                });
+                
+                galleryView.classList.add('active');
+                document.getElementById('fullscreenImage').style.display = 'none';
+                document.getElementById('viewModeBtn').textContent = 'Single View';
+            } else {
+                // Show single image view
+                showFullscreenImage(currentImages[currentImageIndex]);
+                document.getElementById('galleryView').classList.remove('active');
+                document.getElementById('fullscreenImage').style.display = 'block';
+                document.getElementById('viewModeBtn').textContent = 'Grid View';
+            }
+        }
+        
+        
+          // Start auto sliders when page loads
+        window.addEventListener('load', startAutoSliders);
+        
+        
+        
+const texts = ["Algebra is amazing!", "Explore Reasoning!", "Fun with Numbers!", "Master Maths!",];
+let count = 0;
+let span = document.querySelector(".typing-text");
+
+function updateText() {
+    span.textContent = texts[count];
+    count = (count +1 )% texts.length;
+}
+setInterval(updateText, 4000);
+updateText();
+
+        // Download current image
+        
+        
+        
+
+        // Navigation with arrow keys in single view
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('fullscreenOverlay').classList.contains('active') || isGridView) {
+                return;
+            }
+            
+            if (e.key === 'Escape') {
+                closeFullscreen();
+            } else if (e.key === 'ArrowLeft') {
+                currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+                showFullscreenImage(currentImages[currentImageIndex]);
+            } else if (e.key === 'ArrowRight') {
+                currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+                showFullscreenImage(currentImages[currentImageIndex]);
+            }
+        });
+
+        // Close overlay when clicking outside
+        document.getElementById('fullscreenOverlay').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('fullscreenOverlay')) {
+                closeFullscreen();
+            }
+        });
+        
+
+        // Start auto sliders when page loads
+        window.addEventListener('load', startAutoSliders);
+        
+        
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>

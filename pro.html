@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coupon Card Game</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    
+    
+
+    body {
+      background: linear-gradient(135deg, #6a11cb 100%, #2575fc 100%);
+      min-height: ;
+      
+      color: white;
+    }
+    
+       .navbox {
+            display: flex;
+            justify-content: space-between;
+                        align-items: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(35deg,  pink, #b21f1f, #1a2a6c);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+         2     border:px solid yellow;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo h1 {
+           font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo strong {
+            color: #ffcc00;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+            border:px solid yellow;        }
+
+        .nav-links a {
+            text-decoration: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid yellow;
+        }
+
+        .nav-links a:hover {
+            background: blue;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border: 1px solid white;
+             -webkit-tap-highlight-color: transparent;
+    outline: none; /* optional: removes focus ring */
+                    }
+         
+         
+         
+         .secbox{
+           
+           border:2px solid green;
+           display:flex;
+           align-items:center;  
+           justify-content:center;
+           flex-direction:column;
+           
+         }
+         
+         
+         
+          .sec{
+            background: white;
+            padding: 20px;
+            width: 90%;
+            margin: 30px 0;
+            
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            opacity: 1;
+            transform: translateY(2px);
+            transition: all 0.8s ease;
+        }
+
+        .sec.visible {
+            backgroun:2;
+            transform: translateY(0);
+            color :red;
+        }
+
+        h2 {
+            color: #2196F3;
+            font-size: 2em;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: #4CAF50;
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            
+        }
+             
+       li{
+         color:black;
+         margin:6px ;
+            font-size: 1.1em;
+       } 
+       
+       
+             #client-section {
+               width:90%;
+    position: relative;
+    padding: 40px 0;
+    margin:10px;
+    border-radius:16px;
+    border :2px solid blue  ;
+       box-shadow: 0 -10px 50px rgba(0,0,0,0.5);
+    
+    
+    background :yellow;
+            
+        }
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+    margin-bottom: 20px;
+ 
+}
+
+.client-item img {
+    width: 120px;
+    border-radius: 25px;
+    margin:5px;
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.client-item img:hover {
+    filter: grayscale(0%);
+}
+.center{
+    text-align:center;
+    font-size:45px;
+    color:white;
+    background-color:blue;
+    border-radius:14px;
+    margin:2px;
+}
+
+
+/* ===== FEATURES LIST ===== */
+
+
+.probox{
+  
+  border: 2px solid yellow;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li {
+            background: #f0f9ff;
+            padding: 16px 20px;
+            margin: 12px 0;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1em;
+            transition: all 0.4s ease;
+            border-left: 4px solid #e0e0e0;
+        }
+
+        .features li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left-color: #4CAF50;
+        }
+
+        .features li::before {
+            content: "✨";
+            margin-right: 15px;
+            font-size: 1.4em;
+            color: #4CAF50;
+        }
+        
+            .pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+            
+        }
+
+        .card {
+            
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            border: 2px solid #e0e0e0;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(233, 30, 99, 0.2);
+            border-color: #FF5722;
+        }
+
+        .card.pro {
+            border-color: #3498db;
+            position: relative;
+            
+        }
+        
+      
+
+        .card.pro::before {
+            content: "PRO";
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: #E91E63;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .card h3 {
+            font-size: 1.6em;
+            color: #2196F3;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 2.5em;
+            font-weight: bold;
+            color:yellow;
+            margin: 20px 0;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .card ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: #FF5722;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background: #E91E63;
+            transform: scale(1.05);
+        }
+
+
+
+                    
+                    
+                    
+                    
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbox {
+                flex-direction: column;
+                padding: 1.2rem;
+                gap: 1.2rem;
+            }
+             .logo h1 {
+            font-size: 3rem;}
+              .logo img {
+            width: 60px;
+            height: 60px;}
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    
+    
+
+    .main-container {
+      max-width:90%;
+      margin: 40px auto;
+      border:2px solid yellow;
+    }
+
+    /* === Common Card Style === */
+    .card {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 25px;
+      
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .input-group input {
+      flex: 1;
+      padding: 12px;
+      font-size: 17px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .input-group button {
+      padding: 12px 20px;
+      background: #ff4b2b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+       -webkit-tap-highlight-color: transparent;
+    outline: none; /* optional: removes focus ring */
+    }
+
+    .input-group button:hover {
+      background:black;
+    }
+
+    /* === Golden Card === */
+    .golden-card {
+      
+      background: linear-gradient(45deg, #ffd700, #ffed4e);
+      color: #000;
+    }
+
+    .golden-card h2 {
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    /* === Fullscreen Reward === */
+    .fullscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.92);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .fullscreen.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .coupon-btn {
+      padding: 20px 40px;
+      font-size: 24px;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      animation: popIn 0.6s ease-out;
+      text-decoration: none;
+      display: inline-block;
+      -webkit-tap-highlight-color: transparent;
+    outline: none; /* optional: removes focus ring */
+    }
+    
+
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+      .coupon-btn:hover{
+        background:blue;
+        color:yellow;
+        border:2px solid yellow;
+         
+        }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #ff4b2b;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+       -webkit-tap-highlight-color: transparent;
+    outline: none; /* optional: removes focus ring */
+    }
+        .close-btn:hover {
+          background-color:black;
+        }
+      
+
+    /* === ✨ Modern Error Popup === */
+    #errorPopup {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-150%);
+      background: #ff3b30;
+      color: white;
+      padding: 16px 24px;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      z-index: 3000;
+      font-weight: bold;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      opacity: 0;
+    }
+
+    #errorPopup.show {
+      transform: translateX(-50%) translateY(20px);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbox">
+        <div class="logo">
+          <a href="index.html">  <img src="img/8.jpg" alt="AutoMotion Logo"></a>
+            <h1>Auto<strong>Motion</strong></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href ="#client-section">Groups</a></li>
+        </ul>
+    </nav>
+    
+    
+    
+    <div class="secbox">
+      <div class="sec">
+        <h2>How To get pro </h2>
+        <ul>
+            <li>Add them to video overlays or end screens</li>
+            <li>Use them in comment replies to stand out</li>
+            <li>Share them with fans so they can use them in chats</li>
+            <li>Offer them as freebies for subscribers or giveaways</li>
+            <li>Create custom packs for your brand collabs</li>
+        </ul>
+    </div>
+    
+    
+    
+      <section id="client-section">
+    <h1 class="primary center">Our Valued Clients</h1>
+    <div id="clients">
+      <div class="client-item">
+        <a href="33.html"><img src="img/logo2.png" alt="Client Logo 1"></a>
+      </div>
+      <div class="client-item">
+        <img src="img/logo2.png" alt="Client Logo 2">
+      </div>
+      <div class="client-item">
+        <img src="img/logo2.png" alt="Client Logo 3">
+      </div>
+      <div class="client-item">
+        <img src="img/logo2.png" alt="Client Logo 4">
+      </div>
+    </div>
+  </section>
+    
+    
+    
+    
+    </div>
+    
+    
+    
+    
+
+  <div class="main-container">
+
+    <!-- 🔹 Normal Coupons -->
+    <div class="card">
+      <h2>🎁 Regular Coupons</h2>
+      <p>Enter any of the 8 coupon codes</p>
+      <div class="input-group">
+        <input type="text" id="normalInput" placeholder="e.g. SAVE10, FREESHIP..." autocomplete="off" />
+        <button onclick="checkNormalCoupon()">Enter</button>
+      </div>
+    </div>
+
+    <!-- 🟡 Golden Coupon Zone -->
+    <div class="card golden-card">
+      <h2>✨ Golden Coupon Zone</h2>
+      <p>Only <strong>GOLDEN100</strong> works here!</p>
+      <div class="input-group">
+        <input type="text" id="goldenInput" placeholder="Enter GOLDEN100..." autocomplete="off" />
+        <button onclick="checkGoldenCoupon()">Enter</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 🔴 Modern Error Popup -->
+  <div id="errorPopup">❌ Invalid coupon code!</div>
+
+  <!-- Fullscreen Reward -->
+  <div class="fullscreen" id="fullscreen">
+    <button class="close-btn" onclick="closeFullscreen()">✖ Close</button>
+    <a href="#" id="couponLink" class="coupon-btn">Claim Your Reward!</a>
+  </div>
+  
+  
+  <div class="probox">
+  
+   <div class="sec">
+        <h2>Choose Your Plan</h2>
+        <div class="pricing">
+            <!-- Basic Plan -->
+            <div class="card">
+                <h3>Basic Pack</h3>
+                <div class="price">$4.99</div>
+                <ul>
+                    <li>50+ Premium Stickers</li>
+                    <li>High-Res PNG Files</li>
+                    <li>No Watermarks</li>
+                    <li>Email Support</li>
+                </ul>
+                <a href="#" class="btn">Get Now</a>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="card pro">
+                <h3>Pro Pack</h3>
+                <div class="price">$9.99</div>
+                <ul>
+                    <li>150+ Premium Stickers</li>
+                    <li>High-Res PNG & APNG</li>
+                    <li>No Watermarks</li>
+                    <li>Custom Sticker Request</li>
+                    <li>Priority Support</li>
+                    <li>Early Access to New Releases</li>
+                </ul>
+                <a href="#" class="btn">Get Pro Now</a>
+            </div>
+
+            <!-- Creator Plan -->
+            <div class="card">
+                <h3>Creator Pack</h3>
+                <div class="price">$14.99</div>
+                <ul>
+                    <li>300+ Premium Stickers</li>
+                    <li>Custom Logo Integration</li>
+                    <li>Brand-Specific Designs</li>
+                    <li>Monthly New Releases</li>
+                    <li>24/7 Support</li>
+                </ul>
+                <a href="#" class="btn">Get Creator Pack</a>
+            </div>
+        </div>
+    </div>
+</div>
+  <script>
+    // Data
+    const normalCoupons = {
+      "SAVE10": "https://drive.google.com/drive/folders/19V7I3R5eUByPZ-F_aH_ByOC5HAV2oj-O",
+      "FREESHIP": "https://example.com/deal2",
+      "WELCOME25": "https://example.com/deal3",
+      "HAPPY50": "https://example.com/deal4",
+      "SUMMER20": "https://example.com/deal5",
+      "FLASH30": "https://example.com/deal6",
+      "VIP100": "https://example.com/deal7",
+      "BONUS15": "https://example.com/deal8"
+    };
+
+    const goldenCode = "GOLDEN100";
+    const goldenLink = "https://example.com/golden-reward";
+
+    const errorPopup = document.getElementById("errorPopup");
+    const fullscreen = document.getElementById("fullscreen");
+    const couponLink = document.getElementById("couponLink");
+
+    // Enter key support
+    document.getElementById("normalInput").addEventListener("keypress", e => {
+      if (e.key === "Enter") checkNormalCoupon();
+    });
+    document.getElementById("goldenInput").addEventListener("keypress", e => {
+      if (e.key === "Enter") checkGoldenCoupon();
+    });
+
+    // Show modern error
+    function showError(message = "❌ Invalid coupon code!") {
+      errorPopup.textContent = message;
+      errorPopup.classList.add("show");
+      setTimeout(() => {
+        errorPopup.classList.remove("show");
+      }, 3000); // Auto hide after 3 seconds
+    }
+
+    // Normal Coupon Check
+    function checkNormalCoupon() {
+      const code = document.getElementById("normalInput").value.trim().toUpperCase();
+      if (normalCoupons[code]) {
+        showReward(normalCoupons[code]);
+        document.getElementById("normalInput").value = "";
+      } else {
+        showError("❌ Invalid regular coupon!");
+      }
+    }
+
+    // Golden Coupon Check
+    function checkGoldenCoupon() {
+      const code = document.getElementById("goldenInput").value.trim().toUpperCase();
+      if (code === goldenCode) {
+        showReward(goldenLink);
+        document.getElementById("goldenInput").value = "";
+      } else {
+        showError("❌ Invalid coupon code!<");
+      }
+    }
+
+    // Show Fullscreen Reward
+    function showReward(url) {
+      couponLink.href = url;
+      fullscreen.classList.add("active");
+    }
+
+    function closeFullscreen() {
+      fullscreen.classList.remove("active");
+    }
+  </script>
+
+</body>
+</html>
